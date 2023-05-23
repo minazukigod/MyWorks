@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/photoFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.unspashaniskovtsev.ui.Account.ProfileFragment"
+        android:label="AccountFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_detailPhotoFragment"
+            app:destination="@id/detailPhotoFragment"
+            app:enterAnim="@anim/pop_up"
+            app:exitAnim="@anim/pop_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/collectionsFragment"
+        android:name="com.example.unspashaniskovtsev.ui.Collections.CollectionsFragment"
+        android:label="CollectionsFragment" >
+        <action
+            android:id="@+id/action_collectionsFragment_to_detailCollectionsFragment"
+            app:destination="@id/detailCollectionsFragment"
+            app:enterAnim="@anim/pop_up"
+            app:exitAnim="@anim/pop_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoFragment"
+        android:name="com.example.unspashaniskovtsev.ui.Home.HomeFragment"
+        android:label="PicturesFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailPhotoFragment"
+            app:destination="@id/detailPhotoFragment"
+            app:enterAnim="@anim/pop_up"
+            app:exitAnim="@anim/pop_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailPhotoFragment"
+        android:name="com.example.unspashaniskovtsev.ui.Home.Detail.DetailPhotoFragment"
+        android:label="DetailPhotoFragment">
+        <argument
+            android:name="photoId"
+            app:argType="string" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="unsplash.com/photos/{photoId}" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailCollectionsFragment"
+        android:name="com.example.unspashaniskovtsev.ui.Collections.Detail.DetailCollectionsFragment"
+        android:label="DetailCollectionsFragment" >
+        <argument
+            android:name="collectionId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detailCollectionsFragment_to_detailPhotoFragment"
+            app:destination="@id/detailPhotoFragment"
+            app:enterAnim="@anim/pop_up"
+            app:exitAnim="@anim/pop_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.unspashaniskovtsev.ui.Search.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_detailPhotoFragment"
+            app:destination="@id/detailPhotoFragment"
+            app:enterAnim="@anim/pop_up"
+            app:exitAnim="@anim/pop_exit" />
+    </fragment>
+</navigation>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">unspashAniskovtsev</string>
+    <string name="home">Photos</string>
+    <string name="collections">Collections</string>
+    <string name="profile">Profile</string>
+    <string name="search">Search</string>
+    <string name="detail_photo">Photo</string>
+    <string name="title_alert">Exit</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="message_alert">Are you sure about exit?</string>
+    <string name="onboardTextFirstPage">Create photos, share, collect followers, receive feedback!</string>
+    <string name="onboardTextSecondPage">Share with Friends, gather collections</string>
+    <string name="onboardTextThirdPage">Upload favorite photos and check your stats</string>
+    <string name="home_text">Today top</string>
+    <string name="download">Download</string>
+    <string name="exif">
+                Made with: %1$s \n
+                Model: %2$s \n
+                Exposure: %3$s s \n
+                Aperture: %4$s \n
+                Focal length: %5$s \n
+                ISO: %6$d
+    </string>
+    <string name="collection_count_info">
+       Total photos %1$d
+        %2$s
+    </string>
+    <string name="snackbar_success">
+        Download succeed
+    </string>
+
+    <string name="snackbar_error">
+        Network error. The download will start later
+    </string>
+
+    <string name="about">
+        About @%1$s:
+        %2$s
+    </string>
+    <string name="typeSearchQuery">Enter a search query</string>
+</resources>

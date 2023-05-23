@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onboardFragment">
+
+    <fragment
+        android:id="@+id/onboardFragment"
+        android:name="com.example.unspashaniskovtsev.ui.Onboarding.OnboardFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/onboard_fragment">
+        <action
+            android:id="@+id/action_mainFragment_to_authFragment"
+            app:destination="@id/authFragment"
+            app:enterAnim="@anim/pop_up"
+            app:exitAnim="@anim/pop_exit"
+       />
+    </fragment>
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.example.unspashaniskovtsev.ui.Auth.AuthFragment"
+        android:label="AuthFragment"
+        tools:layout="@layout/auth_fragment" >
+        <action
+            android:id="@+id/action_authFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        tools:layout="@layout/main_fragment"
+        android:name="com.example.unspashaniskovtsev.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_authFragment2"
+            app:destination="@id/authFragment" />
+    </fragment>
+</navigation>
